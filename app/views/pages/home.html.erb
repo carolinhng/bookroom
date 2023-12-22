@@ -1,2 +1,48 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
+  <div class="container">
+    <h1>Explore the world !</h1>
+    <p class="mb-5">Find hotel rooms at the best prices.</p>
+    <%= link_to "Discover rooms", rooms_path, class: "button" %>
+  </div>
+</div>
+
+
+<div class="container mt-5">
+  <h2 class="font-size-25px mb-4">Why travel with us?</h2>
+    <div class="home-grid">
+      <div>
+        <h3 class="mb-3">Get the best prices</h3>
+        <p>With our price comparison, find good deals all year round</p>
+      </div>
+      <div>
+        <h3 class="mb-3">9 out of 10 satisfied customers</h3>
+        <p>More than the majority of our customers are already satisfied with our platform</p>
+      </div>
+      <div>
+        <h3 class="mb-3">Leave with complete peace of mind</h3>
+        <p>We are rigorous in the choice of our hotel partners</p>
+      </div>
+    </div>
+
+  <h2 class="font-size-25px mb-4 mt-5">Our good deals</h2>
+    <div class="card-rooms">
+      <% @rooms.limit(4).each do |room| %>
+        <%= link_to room_path(room) do %>
+          <div class="card" style="width: 270px;">
+            <%= image_tag room.picture, class: "card-img-top" %>
+            <div class="card-body d-flex justify-content-between">
+              <div>
+                <h2><%= room.name %></h2>
+                <p><%= room.hotel.name %></p>
+              </div>
+              <div>
+                <p><span class="price"><%= room.price_per_night %>€</span> /night</p>
+                <p>Capacity : <%= room.capacity %></p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+  </div>
+
+</div>

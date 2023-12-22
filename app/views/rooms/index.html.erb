@@ -1,0 +1,29 @@
+<div class="container mt-5">
+  <h1 class="mb-4">Available rooms</h1>
+
+
+  <div class="card-rooms">
+    <% @rooms.each do |room| %>
+      <%= link_to room_path(room) do %>
+
+        <div class="card" style="width: 270px;">
+          <%= image_tag room.picture, class: "card-img-top" %>
+          <div class="card-body d-flex justify-content-between">
+
+            <div>
+              <h2><%= room.name %></h2>
+              <p><%= room.hotel.name %></p>
+            </div>
+
+            <div>
+              <p><span class="price"><%= room.price_per_night %>€</span> /night</p>
+              <p>Capacity : <%= room.capacity %></p>
+            </div>
+
+          </div>
+        </div>
+
+      <% end %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+.button {
+  padding: 15px;
+  background-color: #FF914D;
+  border-radius: 25px;
+  text-decoration: none;
+  color: white;
+}
+
+.button:hover {
+  background-color: #ff7b39;
+  color: white;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 25px;
+  h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #FF914D;
+  }
+  p {
+    font-size: 16px;
+  }
+}
+
+.font-size-25px {
+  font-size: 25px;
+}
+
+.grey {
+  color: rgb(94, 94, 94);
+}
+
+.picture-room {
+  width: 100%;
+  object-fit: cover;
+  height: 400px;
+}
+
+.border-button-none {
+  border: none;
+  padding: 10px;
+}
+
+.padding-right {
+  padding-right: 100px;
+}

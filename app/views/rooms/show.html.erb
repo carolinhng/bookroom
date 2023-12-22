@@ -1,0 +1,64 @@
+<div class="container mt-3">
+  <%= link_to rooms_path, class: "link-go-back" do %>
+    <p><i class="ri-arrow-left-line"></i>Go back</p>
+  <% end %>
+</div>
+
+<div class="container mt-5">
+
+  <h1>Room <%= @room.name %> - <%= @room.hotel.name %></h1>
+  <p class="grey"><%= @room.hotel.address %></p>
+  <%= image_tag @room.picture, class: "picture-room mb-5" %>
+
+  <div class="d-flex">
+
+    <div class="padding-right">
+      <h2>Room Features</h2>
+      <%= @room.description %>
+    </div>
+
+    <div class="card-resume-rent">
+      <div class="card shadow-sm p-3 mb-5 bg-body" style="width: 18rem;">
+
+        <div data-controller="total" data-total-price-value="<%=@room.price_per_night %>"  class="card-body">
+          <h5 class= "pb-2"><span class="font-weight"><%= @room.price_per_night%> €</span> <span class="font-size-14">par jour</span></h5>
+
+            <%= simple_form_for [@room, @booking] do |f| %>
+              <%= f.input :starts_at,
+                          label: 'Arrival', as: :string,
+                          input_html: {
+                              data: {
+                              controller: "datepicker",
+                              target: "datepicker.startDate",
+                              total_target: "bookingStartDate",
+                              }
+                          } %>
+              <%= f.input :ends_at,
+                          label: 'Departure',
+                          as: :string,
+                          input_html: {
+                              data: {
+                              total_target: "bookingEndDate",
+                              action: "input->total#calculate"
+                              }
+                          } %>
+              <%= f.submit "Reserve", class: "button border-button-none", style: "width: 222.72px;"%>
+            <% end %>
+
+            <div class="mt-3 pb-4 border-bottom">
+              <p class="card-text"><%= @room.price_per_night%>€ x <span data-total-target="day">0 </span> jours</p>
+            </div>
+
+            <p class="card-text pt-2">
+              <span class="font-weight">Total : </span>
+              <span data-total-target="price">0</span> €
+            </p>
+
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+</div>
