@@ -1,0 +1,10 @@
+.grid-caract {
+  display: flex;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.border-b {
+  border-top: 1px solid rgb(109, 109, 109);
+
+}

@@ -19,6 +19,12 @@ cosy_hotel_room1 = Room.create!(
   capacity: 2,
   hotel_id: cosy_hotel.id,
   name: "Bon dia",
+  bed: "Double bed",
+  wifi: "Free wifi",
+  bathroom: "Shared bathroom",
+  tv: "Flat-screen TV",
+  towel: "Towels provided",
+  service: "Air conditionning",
   description: "Room in the Cozy Hostel hotel close to public transport: tram, bus, bike... 5 minutes on foot. The hotel is ideally located in the Alfama district.",
   picture: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
@@ -28,6 +34,12 @@ Room.create!(
   hotel_id: cosy_hotel.id,
   description: "Room in the Cozy Hostel hotel close to public transport: tram, bus, bike... 5 minutes on foot. The hotel is ideally located in the Alfama district.",
   name: "Cosy room",
+  bed: "Double bed",
+  wifi: "Free wifi",
+  bathroom: "Shared bathroom",
+  tv: "Flat-screen TV",
+  towel: "Towels provided",
+  service: "Wake up service",
   picture: "https://images.unsplash.com/photo-1594560913036-d15f23f8a91c?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 Room.create!(
@@ -36,6 +48,12 @@ Room.create!(
   hotel_id: cosy_hotel.id,
   description: "Room in the Cozy Hostel hotel close to public transport: tram, bus, bike... 5 minutes on foot. The hotel is ideally located in the Alfama district.",
   name: "Confort room",
+  bed: "1 Double bed, 1 single bed",
+  wifi: "Free wifi",
+  bathroom: "Shared bathroom",
+  tv: "Flat-screen TV",
+  towel: "Towels provided",
+  service: "Air conditionning",
   picture: "https://images.unsplash.com/photo-1594560913095-8cf34bab82ad?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 Room.create!(
@@ -44,6 +62,12 @@ Room.create!(
   hotel_id: cosy_hotel.id,
   description: "Room in the Cozy Hostel hotel close to public transport: tram, bus, bike... 5 minutes on foot. The hotel is ideally located in the Alfama district.",
   name: "Verde room",
+  bed: "2 double bed",
+  wifi: "Free wifi",
+  bathroom: "Shared bathroom",
+  tv: "Flat-screen TV",
+  towel: "Towels provided",
+  service: "Wake up service",
   picture: "https://images.unsplash.com/photo-1600210491305-7396500b5b31?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 Room.create!(
@@ -52,6 +76,12 @@ Room.create!(
   hotel_id: cosy_hotel.id,
   description: "Room in the Cozy Hostel hotel close to public transport: tram, bus, bike... 5 minutes on foot. The hotel is ideally located in the Alfama district.",
   name: "Noche room",
+  bed: "4 single beds",
+  wifi: "Free wifi",
+  bathroom: "Shared bathroom",
+  tv: "Flat-screen TV",
+  towel: "Towels provided",
+  service: "Wake up service",
   picture: "https://images.unsplash.com/photo-1629794226066-349748040fb7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 
@@ -69,6 +99,12 @@ next_hotel_room1 = Room.create!(
   hotel_id: next_hotel.id,
   description: "Room in the Cozy Hostel hotel close to public transport: tram, bus, bike... 5 minutes on foot. The hotel is ideally located in the Alfama district.",
   name: "Trio room",
+  bed: "1 double bed, 1 single beb",
+  wifi: "Free wifi",
+  bathroom: "Private bathroom",
+  tv: "Flat-screen TV",
+  towel: "Towels provided",
+  service: "Air conditionning",
   picture: "https://images.unsplash.com/photo-1632210702485-e1841e30752a?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 Room.create!(
@@ -77,6 +113,12 @@ Room.create!(
   hotel_id: next_hotel.id,
   description: "Room in the Cozy Hostel hotel close to public transport: tram, bus, bike... 5 minutes on foot. The hotel is ideally located in the Alfama district.",
   name: "Standard room",
+  bed: "Double bed",
+  wifi: "Free wifi",
+  bathroom: "Private bathroom",
+  tv: "Flat-screen TV",
+  towel: "Towels provided",
+  service: "Air conditionning",
   picture: "https://plus.unsplash.com/premium_photo-1674676471380-1258cb31b3ac?q=80&w=2009&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 Room.create!(
@@ -85,6 +127,12 @@ Room.create!(
   hotel_id: next_hotel.id,
   description: "Room in the Cozy Hostel hotel close to public transport: tram, bus, bike... 5 minutes on foot. The hotel is ideally located in the Alfama district.",
   name: "Good room",
+  bed: "3 single beds",
+  wifi: "Free wifi",
+  bathroom: "Private bathroom",
+  tv: "Flat-screen TV",
+  towel: "Towels provided",
+  service: "Air conditionning",
   picture: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 Room.create!(
@@ -93,6 +141,12 @@ Room.create!(
   hotel_id: next_hotel.id,
   description: "Room in the Cozy Hostel hotel close to public transport: tram, bus, bike... 5 minutes on foot. The hotel is ideally located in the Alfama district.",
   name: "Delux room",
+  bed: "2 Kingsize beds",
+  wifi: "Free wifi",
+  bathroom: "Private bathroom",
+  tv: "Flat-screen TV",
+  towel: "Towels provided",
+  service: "Wake up service",
   picture: "https://images.unsplash.com/flagged/photo-1573168710865-2e4c680d921a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 Room.create!(
@@ -101,6 +155,12 @@ Room.create!(
   hotel_id: next_hotel.id,
   description: "Room in the Cozy Hostel hotel close to public transport: tram, bus, bike... 5 minutes on foot. The hotel is ideally located in the Alfama district.",
   name: "King room",
+  bed: "2 kingsize beds",
+  wifi: "Free wifi",
+  bathroom: "Private bathroom",
+  tv: "Flat-screen TV",
+  towel: "Towels provided",
+  service: "Wake up service",
   picture: "https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 
@@ -113,10 +173,17 @@ Booking.create!(
 
 baixa_hotel = Hotel.create!(name: "Hotel Da Baixa", address: "Rua da Prata 231, Lisbon 1100-417 Portugal")
 baixa_hotel_room1 = Room.create!(
-  price_per_night: 600,
+  price_per_night: 400,
   capacity: 4,
   hotel_id: baixa_hotel.id,
+  description: "Room in the Cozy Hostel hotel close to public transport: tram, bus, bike... 5 minutes on foot. The hotel is ideally located in the Alfama district.",
   name: "Quatro room",
+  bed: "2 kingsize beds",
+  wifi: "Free wifi",
+  bathroom: "Private bathroom",
+  tv: "Flat-screen TV",
+  towel: "Towels provided",
+  service: "Wake up service",
   picture: "https://images.unsplash.com/photo-1598928636135-d146006ff4be?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 Room.create!(
@@ -125,6 +192,12 @@ Room.create!(
   hotel_id: baixa_hotel.id,
   description: "Room in the Cozy Hostel hotel close to public transport: tram, bus, bike... 5 minutes on foot. The hotel is ideally located in the Alfama district.",
   name: "Double room",
+  bed: "2 kingsize beds",
+  wifi: "Free wifi",
+  bathroom: "Private bathroom",
+  tv: "Flat-screen TV",
+  towel: "Towels provided",
+  service: "Wake up service",
   picture: "https://images.unsplash.com/photo-1618221118493-9cfa1a1c00da?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 Room.create!(
@@ -133,6 +206,12 @@ Room.create!(
   hotel_id: baixa_hotel.id,
   description: "Room in the Cozy Hostel hotel close to public transport: tram, bus, bike... 5 minutes on foot. The hotel is ideally located in the Alfama district.",
   name: "Mix room",
+  bed: "2 kingsize beds, 1 single bed",
+  wifi: "Free wifi",
+  bathroom: "Private bathroom",
+  tv: "Flat-screen TV",
+  towel: "Towels provided",
+  service: "Wake up service",
   picture: "https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 Room.create!(
@@ -140,6 +219,12 @@ Room.create!(
   capacity: 3,
   hotel_id: baixa_hotel.id,
   name: "Triple room",
+  bed: "2 double beds, 1 single bed",
+  wifi: "Free wifi",
+  bathroom: "Private bathroom",
+  tv: "Flat-screen TV",
+  towel: "Towels provided",
+  service: "Wake up service",
   picture: "https://images.unsplash.com/photo-1571508601891-ca5e7a713859?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 Room.create!(
@@ -148,6 +233,12 @@ Room.create!(
   hotel_id: baixa_hotel.id,
   description: "Room in the Cozy Hostel hotel close to public transport: tram, bus, bike... 5 minutes on foot. The hotel is ideally located in the Alfama district.",
   name: "Duo room",
+  bed: "Kingsize beds",
+  wifi: "Free wifi",
+  bathroom: "Private bathroom",
+  tv: "Flat-screen TV",
+  towel: "Towels provided",
+  service: "Air conditionning",
   picture: "https://images.unsplash.com/photo-1585821569331-f071db2abd8d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 

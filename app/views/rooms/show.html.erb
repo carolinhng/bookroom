@@ -13,14 +13,52 @@
   <div class="d-flex">
 
     <div class="padding-right">
-      <h2>Room Features</h2>
+      <h2 class="font-size-25px">Room Features</h2>
       <%= @room.description %>
+      <div class="grid-caract mt-4">
+        <div>
+          <div class="d-flex align-items-center mt-4">
+            <i class="fa-solid fa-bed pe-2 fs-5" style="color: #ff914d;"></i>
+            <p class="margin-none"><%= @room.bed %></p>
+          </div>
+
+          <div class="d-flex align-items-center mt-4">
+            <i class="fa-solid fa-bath pe-2 fs-5" style="color: #ff914d;"></i>
+            <p class="margin-none"><%= @room.bathroom %></p>
+          </div>
+
+          <div class="d-flex align-items-center mt-4">
+            <i class="fa-solid fa-toilet-paper pe-2 fs-5" style="color: #ff914d;"></i>
+            <p class="margin-none"><%= @room.towel %></p>
+          </div>
+        </div>
+
+        <div>
+          <div class="d-flex align-items-center mt-4">
+            <i class="fa-solid fa-bell-concierge pe-2 fs-5" style="color: #ff914d;"></i>
+            <p class="margin-none"><%= @room.service %></p>
+          </div>
+
+          <div class="d-flex align-items-center mt-4">
+            <i class="fa-solid fa-wifi pe-2 fs-5" style="color: #ff914d;"></i>
+            <p class="margin-none"><%= @room.wifi %></p>
+          </div>
+
+          <div class="d-flex align-items-center mt-4">
+            <i class="fa-solid fa-tv pe-2 fs-5" style="color: #ff914d;"></i>
+            <p class="margin-none"><%= @room.tv %></p>
+          </div>
+        </div>
+      </div>
+      <div class="border-b mt-5"></div>
+      <h3 class="font-size-25px mt-5"><%= @room.hotel.name %> also offers you these rooms</h3>
     </div>
 
     <div class="card-resume-rent">
       <div class="card shadow-sm p-3 mb-5 bg-body" style="width: 18rem;">
 
         <div data-controller="total" data-total-price-value="<%=@room.price_per_night %>"  class="card-body">
+          <h2>Reservation</h2>
           <h5 class= "pb-2"><span class="font-weight"><%= @room.price_per_night%> €</span> <span class="font-size-14">par jour</span></h5>
 
             <%= simple_form_for [@room, @booking] do |f| %>
@@ -58,7 +96,6 @@
 
       </div>
     </div>
-
 
   </div>
 </div>
