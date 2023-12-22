@@ -67,7 +67,8 @@
                           input_html: {
                               data: {
                               controller: "datepicker",
-                              target: "datepicker.startDate"
+                              target: "datepicker.startDate",
+                              total_target: "bookingSartDate"
                               }
                           } %>
               <%= f.input :ends_at,
@@ -76,7 +77,7 @@
                           input_html: {
                               data: {
                               total_target: "bookingEndDate",
-                              action: "input->total#calculate"
+                              action: "change->total#calculate"
                               }
                           } %>
 

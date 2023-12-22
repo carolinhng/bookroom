@@ -8,22 +8,20 @@ export default class extends Controller {
   }
   connect() {
     // console.log(this.bookingStartDateTarget.value);
-    console.log(document.getElementById('booking_starts_at').value);
-
   }
 
   calculate() {
-    console.log(document.getElementById('booking_starts_at').value);
     const startDay = new Date(this.bookingStartDateTarget.value).parse;
     const endDay = new Date(this.bookingEndDateTarget.value).parse;
+    console.log(startDay);
 
     const [year, month, day] = this.bookingStartDateTarget.value.split(".");
     const dateOfBeginning = new Date(day, month - 1, year);
-    console.log(dateOfBeginning);
+    // console.log(dateOfBeginning);
 
     const [year2, month2, day2] = this.bookingEndDateTarget.value.split(".");
     const dateDeFin = new Date(day2, month2 - 1, year2);
-    console.log(dateOfBeginning);
+    // console.log(dateOfBeginning);
 
     const differenceEnMilliseconds = dateDeFin - dateOfBeginning;
 
