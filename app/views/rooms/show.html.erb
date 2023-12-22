@@ -10,10 +10,10 @@
   <p class="grey"><%= @room.hotel.address %></p>
   <%= image_tag @room.picture, class: "picture-room mb-5" %>
 
-  <div class="d-flex">
+  <div class="d-flex align-items-center">
 
     <div class="padding-right">
-      <h2 class="font-size-25px">Room Features</h2>
+      <h2 class="font-size-25px mb-5">Room Features</h2>
       <%= @room.description %>
       <div class="grid-caract mt-4">
         <div>
@@ -51,24 +51,23 @@
         </div>
       </div>
       <div class="border-b mt-5"></div>
-      <h3 class="font-size-25px mt-5"><%= @room.hotel.name %> also offers you these rooms</h3>
+
     </div>
 
     <div class="card-resume-rent">
-      <div class="card shadow-sm p-3 mb-5 bg-body" style="width: 18rem;">
+      <div class="card shadow-sm p-3 mb-5 bg-body" style="width: 450px; border-radius: 20px;">
 
         <div data-controller="total" data-total-price-value="<%=@room.price_per_night %>"  class="card-body">
-          <h2>Reservation</h2>
-          <h5 class= "pb-2"><span class="font-weight"><%= @room.price_per_night%> €</span> <span class="font-size-14">par jour</span></h5>
+          <h2 class="mb-3" style="font-size: 25px;">Reservation</h2>
 
             <%= simple_form_for [@room, @booking] do |f| %>
               <%= f.input :starts_at,
-                          label: 'Arrival', as: :string,
+                          label: 'Arrival',
+                          as: :string,
                           input_html: {
                               data: {
                               controller: "datepicker",
-                              target: "datepicker.startDate",
-                              total_target: "bookingStartDate",
+                              target: "datepicker.startDate"
                               }
                           } %>
               <%= f.input :ends_at,
@@ -80,22 +79,51 @@
                               action: "input->total#calculate"
                               }
                           } %>
-              <%= f.submit "Reserve", class: "button border-button-none", style: "width: 222.72px;"%>
+
+                <div class="mt-4 d-flex justify-content-between">
+                  <p class="font-weight-600">Number of nights</p>
+                  <p data-total-target="night">0</p>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                  <p class="font-weight-600">Price</p>
+                  <p><%= @room.price_per_night %> €</p>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                  <p class="font-weight-600">Total <%= @room.price_per_night%>€ x <span data-total-target="night">0 </span></p>
+                  <p><span data-total-target="price">0</span> €</p>
+                </div>
+
+              <%= f.submit "Reserve", class: "button border-button-none", style: "width: 385px;"%>
             <% end %>
-
-            <div class="mt-3 pb-4 border-bottom">
-              <p class="card-text"><%= @room.price_per_night%>€ x <span data-total-target="day">0 </span> jours</p>
-            </div>
-
-            <p class="card-text pt-2">
-              <span class="font-weight">Total : </span>
-              <span data-total-target="price">0</span> €
-            </p>
-
         </div>
 
       </div>
     </div>
 
   </div>
+
+  <h3 class="font-size-25px mb-5"><%= @room.hotel.name %> also offers you these rooms</h3>
+    <div class="card-rooms">
+        <% @rooms_hotel.limit(4).each do |room| %>
+          <%= link_to room_path(room) do %>
+            <div class="card" style="width: 270px;">
+              <%= image_tag room.picture, class: "card-img-top" %>
+              <div class="card-body d-flex justify-content-between">
+                <div>
+                  <h2><%= room.name %></h2>
+                  <p><%= room.hotel.name %></p>
+                </div>
+                <div>
+                  <p><span class="price"><%= room.price_per_night %>€</span> /night</p>
+                  <p>Capacity : <%= room.capacity %></p>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+    </div>
+
+
 </div>

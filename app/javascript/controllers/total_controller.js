@@ -2,18 +2,18 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="total"
 export default class extends Controller {
-  static targets = ["bookingStartDate", "bookingEndDate", "day", "price"]
+  static targets = ["bookingStartDate", "bookingEndDate", "night", "price"]
   static values = {
     price: Number,
   }
   connect() {
-    console.log(this.bookingStartDateTarget.value);
-    console.log(this.bookingEndDateTarget.value);
-    console.log("hello")
+    // console.log(this.bookingStartDateTarget.value);
+    console.log(document.getElementById('booking_starts_at').value);
+
   }
 
   calculate() {
-    // console.log(this.bookingEndDateTarget.value);
+    console.log(document.getElementById('booking_starts_at').value);
     const startDay = new Date(this.bookingStartDateTarget.value).parse;
     const endDay = new Date(this.bookingEndDateTarget.value).parse;
 
@@ -29,7 +29,7 @@ export default class extends Controller {
 
     const numberOfDays = Math.floor(differenceEnMilliseconds / (1000 * 60 * 60 * 24));
 
-    this.dayTarget.innerText = numberOfDays;
+    this.nightTarget.innerText = numberOfDays;
 
     const total = this.priceValue * parseInt(numberOfDays);
     this.priceTarget.innerText = total

@@ -219,6 +219,7 @@ Room.create!(
   capacity: 3,
   hotel_id: baixa_hotel.id,
   name: "Triple room",
+  description: "Room in the Cozy Hostel hotel close to public transport: tram, bus, bike... 5 minutes on foot. The hotel is ideally located in the Alfama district.",
   bed: "2 double beds, 1 single bed",
   wifi: "Free wifi",
   bathroom: "Private bathroom",
